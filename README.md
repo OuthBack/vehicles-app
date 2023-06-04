@@ -73,6 +73,11 @@
 
 Um site de visualização e cadastramento de veículos
 
+### :eyeglasses: Repositórios
+
+Backend: https://github.com/OuthBack/vehicles-crud.git
+Frontend: https://github.com/OuthBack/vehicles-angular.git
+
 ### 🔋 Feito com:
 
 * [Next.js](https://nextjs.org)
