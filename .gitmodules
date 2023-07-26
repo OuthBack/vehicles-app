@@ -1,6 +1,0 @@
-[submodule "vehicles-angular"]
-	path = vehicles-angular
-	url = https://github.com/OuthBack/vehicles-angular.git
-[submodule "vehicles-crud"]
-	path = vehicles-crud
-	url = https://github.com/OuthBack/vehicles-crud.git
