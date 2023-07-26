@@ -5,8 +5,6 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -16,169 +14,153 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Forks][forks-shield]][forks-url]
+<!-- [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-[![site-status]](https://vehicles-angular.vercel.app)
+[![MIT License][license-shield]][license-url]-->
 
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![site-status]](https://vehicles-front.vercel.app)
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h3 align="center">Vehicles</h3>
+  <!--
+  <a href="https://github.com/OuthBack/taq-challenge">
+    <img src=".github/logo.png" alt="Logo" width="80" height="80">
+  </a>
+  -->
+
+  <h3 align="center">Vehicles App</h3>
 
   <p align="center">
-    Um site de visualização e cadastramento de veículos
+    The package is a "sentinel" that trigger a function when is visible.
     <br />
     <br />
-    <a href="https://vehicles-angular.vercel.app">Ver Preview</a>
+    <a href="https://vehicles-front.vercel.app">View Preview</a>
     ·
-    <a href="https://github.com/OuthBack/vehicles-app/issues">Reportar Bug</a>
+    <a href="https://github.com/OuthBack/taq-challenge/issues">Report Bug</a>
     ·
-    <a href="https://github.com/OuthBack/vehicles-app/issues">Requisitar Feature</a>
+    <a href="https://github.com/OuthBack/taq-challenge/issues">Require Feature</a>
   </p>
 </p>
 
-
-
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Tabela de Conteúdo</summary>
+  <summary>Content Tabel</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Sobre o projeto</a>
+      <a href="#about-the-project">About the project</a>
       <ul>
-        <li><a href="#built-with">Feito com:</a></li>
+        <li><a href="#built-with">Built with:</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Pré-requisitos</a></li>
-        <li><a href="#installation">Instalação</a></li>
+        <li><a href="#prerequisites">Requirements</a></li>
+        <li><a href="#installation">Instalation</a></li>
+        <li><a href="#props">Instalation</a></li>
       </ul>
     </li>
     <li><a href="#usage">Site Preview</a></li>
-    <li><a href="#license">Licença</a></li>
-    <li><a href="#contact">Contato</a></li>
+    <li><a href="#license">Licence</a></li>
+    <li><a href="#contact">Contact</a></li>
 
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
-## 📖 Sobre o projeto
 
-Um site de visualização e cadastramento de veículos
+## 📖 About the project
 
-### :eyeglasses: Repositórios
+The project is a CRUD + Frontend of vehicles.
 
-Backend: https://github.com/OuthBack/vehicles-crud.git
+### 🔋 Built with:
 
-Frontend: https://github.com/OuthBack/vehicles-angular.git
-
-### 🔋 Feito com:
-
-* [Next.js](https://nextjs.org)
-* [Prisma](https://www.prisma.io)
-* [Node.js](https://nodejs.org/en)
-* [Angular](https://angular.io)
-* [Material UI](https://material.angular.io)
-* [PNPM](https://pnpm.io/pt/)
-* [Docker](https://www.docker.com)
-* [Docker-Compose](https://docs.docker.com/compose)
+- Typescript
+- Angular
+- Svelte
+- Nest.js
+- SQLite
+- Docker
+- Docker Compose
 
 <!-- GETTING STARTED -->
+
 ## :scroll: Getting Started
 
-Para rodar o projeto localmente siga os seguintes passos:
+To run the project it is just:
 
-### :warning: Pré-requisitos
+### :warning: Requirements
 
-* docker-compose
+- Docker
+- Docker Compose
 
-### :gear: Instalação
-1. Inicie o backend com o docker-compose. Para isso siga as instruções em https://github.com/OuthBack/vehicles-app.git  
+### :gear: Installation
 
-2. Clone o repositório
+1. Choose your app in vehicles crud
    ```sh
-   git clone --recurse-submodules https://github.com/OuthBack/vehicles-app.git 
+      cd vehicles-crud/new_nest
    ```
-
-3. Vá ao backend
-   ```sh
-    cd vehicles-crud
-   ```
-
-4. Crie um .env com as informações
-   ```env
-    DATABASE_URL=mysql://fkwrjxzyb2jmrnmrnri8:pscale_pw_b1XnzGP6HGqxRhJJbpy2WfESAFfzmPO3gJBuAMPZMbv@aws.connect.psdb.cloud/vehicles?sslaccept=strict
-    MYSQL_ROOT_HOST=localhost
-    MYSQLDB_ROOT_PASSWORD=123456
-    MYSQLDB_DATABASE=vehicles
-    MYSQLDB_LOCAL_PORT=3306
-    MYSQLDB_DOCKER_PORT=3306
-
-    NODE_DOCKER_PORT=3000
-    NODE_LOCAL_PORT=3000
-   ```
-
-5. Inicie o backend
-   ```sh
+2. Run Docker Compose
+```sh
     docker-compose up -d
-   ```
-
-6. Vá para o frontend
+```
+3. Choose your app in vehicles front
    ```sh
-    cd ../vehicles-angular
+      cd vehicles-front/svelte
    ```
-
-7. Inicie o frontend
-   ```sh
+4. Run Docker Compose
+```sh
     docker-compose up -d
-   ```
+```
 
-8. Acesse o endereço http://localhost:8080
-   
+- Ports
+  vehicle-crud: 3000,
+  vehicles front: {
+    svelte: 5173,
+    angular: 4200
+  }
+
 <!-- Site Preview -->
+
 ## 🖥️ Site Preview
-[![site-status]](https://vehicles-angular.vercel.app)
+
+[![site-status]](https://vehicles-front.vercel.app)
+
 <br/>
 
-[![Product Name Screen Shot][product-screenshot]](https://vehicles-angular.vercel.app)
-Veja o Preview do Site:
-https://vehicles-angular.vercel.app
+<!-- [![Product Name Screen Shot][product-screenshot]](https://vehicles-front.vercel.app) -->
 
-<!-- LICENÇA -->
-## :pencil: Licença
-                                                     
-                                                    
-Distribuido sobre a Licença MIT.
-                                                      
-                                                      
+See the Site Preview:
+https://vehicles-front.vercel.app
+
+## :pencil: Licence
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
 <!-- CONTACT -->
-## :telephone_receiver: Contato
+
+## :telephone_receiver: Contact
 
 Henrique Figueiredo - riquessan@gmail.com
 
-Link do Projeto: [https://github.com/OuthBack/vehicles-app](https://github.com/OuthBack/vehicles-app)
-
+Project Link: [https://github.com/OuthBack/vehicles-app](https://github.com/OuthBack/vehicles-app)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+
+[contributors-shield]: https://img.shields.io/github/OuthBack/vehicles-app/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/OuthBack/vehicles-app/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/OuthBack/vehicles-app.svg?style=for-the-badge
+[forks-url]: https://github.com/OuthBack/vehicles-app/network/members
+[stars-shield]: https://img.shields.io/github/stars/OuthBack/vehicles-app.svg?style=for-the-badge
+[stars-url]: https://github.com/OuthBack/vehicles-app/stargazers
+[issues-shield]: https://img.shields.io/github/issues/OuthBack/vehicles-app.svg?style=for-the-badge
+[issues-url]: https://github.com/OuthBack/vehicles-app/issues
+[license-shield]: https://img.shields.io/github/license/OuthBack/vehicles-app.svg?style=for-the-badge
+[license-url]: https://github.com/OuthBack/vehicles-app/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/h-figueiredo
+[linkedin-url]: https://www.linkedin.com/in/h-figueiredo
 [product-screenshot]: .github/screenshot.png
-[site-status]: https://img.shields.io/website/https/vehicles-angular.vercel.app/path/to/page.html.svg.?style=for-the-badge
+[site-status]: https://img.shields.io/website/https/vercel.com/outhback/vehicles-app/path/to/page.html.svg.?style=for-the-badge
