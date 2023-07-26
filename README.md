@@ -33,7 +33,7 @@
   <h3 align="center">Vehicles App</h3>
 
   <p align="center">
-    The package is a "sentinel" that trigger a function when is visible.
+    The app is a CRUD for vehicles(create, read, update, delete)
     <br />
     <br />
     <a href="https://vehicles-front.vercel.app">View Preview</a>
