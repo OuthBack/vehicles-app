@@ -99,20 +99,20 @@ To run the project it is just:
 ### :gear: Installation
 
 1. Choose your app in vehicles crud
-   ```sh
-      cd vehicles-crud/new_nest
-   ```
+```sh
+cd vehicles-crud/new_nest
+```
 2. Run Docker Compose
 ```sh
-    docker-compose up -d
+docker-compose up -d
 ```
 3. Choose your app in vehicles front
-   ```sh
-      cd vehicles-front/svelte
-   ```
+```sh
+cd vehicles-front/svelte
+```
 4. Run Docker Compose
 ```sh
-    docker-compose up -d
+docker-compose up -d
 ```
 
 - Ports
