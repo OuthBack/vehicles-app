@@ -1,0 +1,101 @@
+<div class="form-vehicle__container">
+  <div class="form-vehicle__inner-container">
+    <div class="form-vehicle__function-switcher">
+      <button (click)="onClickSwitchToCreate()" type="button" mat-raised-button
+        [ngClass]="{'disable-click': actionType === 'create'}" [color]="actionType === 'create' && 'primary'">Cadastrar
+        Veículo
+      </button>
+      <button (click)="onClickSwitchToEdit()" type="button" mat-raised-button
+        [ngClass]="{'disable-click': actionType === 'edit'}" [color]="actionType === 'edit' && 'primary'">Editar Veículo
+      </button>
+    </div>
+    <form #saveVehicleForm="ngForm" [formGroup]="vehicleForm" (ngSubmit)="onSubmit(saveVehicleForm)">
+      <mat-form-field>
+        <mat-label for="plate">Placa</mat-label>
+        <input minlength="7" maxlength="7" type="text" matInput formControlName="plate" [errorStateMatcher]="matcher"
+          placeholder="ABC1234">
+        <mat-hint>A placa precisa ser única. Letras minúsculas serão consideradas como maiúsculas</mat-hint>
+        <mat-error *ngIf="getFirstError('plate') === 'required'">
+          A placa é <strong>obrigatório</strong>.
+        </mat-error>
+        <mat-error *ngIf="getFirstError('plate') === 'minlength' || getFirstError('plate') === 'maxlength'">
+          A placa precisa conter <strong>7 caractéres</strong>.
+        </mat-error>
+      </mat-form-field>
+      <div class="form-vehicle__full-form" *ngIf="actionType === 'create' || vehicleToEdit">
+        <mat-form-field [formGroup]="vehicleForm">
+          <mat-label for="model">Modelo</mat-label>
+          <input maxlength="60" type="text" matInput formControlName="model" [errorStateMatcher]="matcher"
+            placeholder="Fiesta">
+
+          <mat-error *ngIf="getFirstError('model') === 'required'">
+            O modelo é <strong>obrigatório</strong>.
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="brand">Marca</mat-label>
+          <input type="text" maxlength="30" matInput formControlName="brand" [errorStateMatcher]="matcher"
+            placeholder="Ford">
+          <mat-error *ngIf="getFirstError('brand') === 'required'">
+            A marca é <strong>obrigatório</strong>.
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="year">Ano</mat-label>
+          <input type="number" matInput formControlName="year" [errorStateMatcher]="matcher" placeholder="2023">
+
+          <mat-error *ngIf="getFirstError('year') === 'required'">
+            O ano é <strong>obrigatório</strong>.
+          </mat-error>
+          <mat-error *ngIf="getFirstError('year') === 'min'">
+            O ano é menor que <strong>{{ minYear }}</strong>.
+          </mat-error>
+          <mat-error *ngIf="getFirstError('year') === 'max'">
+            O ano é maior que <strong>{{ maxYear }}</strong>.
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="chassis">Chassi</mat-label>
+          <input minlength="17" maxlength="17" type="text" matInput formControlName="chassis"
+            [errorStateMatcher]="matcher" placeholder="48E avmWjV A9 tb5312">
+          <mat-hint>O chassi precisa ser único</mat-hint>
+
+          <mat-error *ngIf="getFirstError('chassis') === 'minlength' || getFirstError('chassis') === 'maxlength'">
+            O chassi precisa conter <strong>17 digitos</strong>.
+          </mat-error>
+          <mat-error *ngIf="getFirstError('chassis') === 'required'">
+            O chassi é <strong>obrigatório</strong>.
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label for="renavam">Renavam</mat-label>
+          <input minlength="11" maxlength="11" type="text" matInput formControlName="renavam"
+            [errorStateMatcher]="matcher" placeholder="45206083475">
+          <mat-hint>O renavam precisa ser único</mat-hint>
+
+          <mat-error *ngIf="getFirstError('renavam') === 'required'">
+            O renavam é <strong>obrigatório</strong>.
+          </mat-error>
+          <mat-error *ngIf="getFirstError('renavam') === 'minlength' || getFirstError('renavam') === 'maxlength'">
+            O renavam precisa conter <strong>11 digitos</strong>.
+          </mat-error>
+          <mat-error *ngIf="getFirstError('renavam') === 'pattern'">
+            O renavam precisa conter somente <strong>números</strong>.
+          </mat-error>
+        </mat-form-field>
+        <div class="form-vehicle__button-container">
+          <button type="submit" mat-raised-button color="primary">{{buttonTitle}}</button>
+        </div>
+      </div>
+      <div *ngIf="loadingSaveVehicle" class=" form-vehicle__loading">
+        <mat-spinner></mat-spinner>
+      </div>
+      <div class="form-vehicle__button-container" *ngIf="actionType === 'edit' && !vehicleToEdit">
+        <button (click)="onGetVehicle()" type="button" mat-raised-button color="primary">Buscar Veículo</button>
+      </div>
+      <div *ngIf="loadingVehicle" class=" form-vehicle__loading">
+        <mat-spinner></mat-spinner>
+      </div>
+    </form>
+  </div>
+</div>
