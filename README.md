@@ -22,8 +22,6 @@
 [![site-status]](https://vehicles-front.vercel.app)
 
 <!-- PROJECT LOGO -->
-<br />
-<p align="center">
   <!--
   <a href="https://github.com/OuthBack/taq-challenge">
     <img src=".github/logo.png" alt="Logo" width="80" height="80">
