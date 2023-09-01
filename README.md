@@ -35,7 +35,6 @@
     The app is a CRUD for vehicles(create, read, update, delete)
     <br />
     <br />
-![ezgif com-video-to-gif](https://github.com/OuthBack/vehicles-app/assets/65133825/535b8068-9baf-47fe-97d5-4dbde7adcb41)
 
     <a href="https://vehicles-front.vercel.app">View Preview</a>
     ·
