@@ -21,6 +21,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![site-status]](https://vehicles-front.vercel.app)
 
+
 <!-- PROJECT LOGO -->
   <!--
   <a href="https://github.com/OuthBack/taq-challenge">
@@ -34,6 +35,8 @@
     The app is a CRUD for vehicles(create, read, update, delete)
     <br />
     <br />
+![ezgif com-video-to-gif](https://github.com/OuthBack/vehicles-app/assets/65133825/535b8068-9baf-47fe-97d5-4dbde7adcb41)
+
     <a href="https://vehicles-front.vercel.app">View Preview</a>
     ·
     <a href="https://github.com/OuthBack/taq-challenge/issues">Report Bug</a>
